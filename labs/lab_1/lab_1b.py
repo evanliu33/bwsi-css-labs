@@ -35,7 +35,8 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
         else:
             raise ValueError("Cannot divide by zero.")
     else:
-        raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+        new_operation = input("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide': ")
+        return (simple_calculator(new_operation, num1, num2))
 def check_num(num):
     while True:
         try:
